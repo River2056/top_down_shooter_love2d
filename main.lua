@@ -1,4 +1,5 @@
 function love.load()
+    -- load necessary assets
     sprites = {}
     sprites.background = love.graphics.newImage('sprites/background.png')
     sprites.bullet = love.graphics.newImage('sprites/bullet.png')
@@ -24,7 +25,9 @@ function love.keypressed(key)
 end
 
 function love.draw()
+    -- background
     love.graphics.draw(sprites.background, 0, 0)
 
+    -- player
     love.graphics.draw(player.sprite, player.x, player.y)
 end
